@@ -4,7 +4,7 @@ html[class='light'] .home {
       rgba(250, 250, 250, 0.5),
       rgba(250, 250, 250, 0.5)
     ),
-    url('../public/images/backgrounds/keyboard-mouse.jpg');
+    url('/images/backgrounds/keyboard-mouse.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@ html[class='dark'] .home {
       rgba(39, 39, 42, 0.5),
       rgba(39, 39, 42, 0.5)
     ),
-    url('../public/images/backgrounds/keyboard-mouse.jpg');
+    url('/images/backgrounds/keyboard-mouse.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
