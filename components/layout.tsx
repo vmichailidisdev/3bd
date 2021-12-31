@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import React, { createContext } from 'react';
-import styles from '@/styles/layout.module.css';
+import styles from '../styles/layout.module.css';
 import Navbar from './navbar';
 import { useRouter } from 'next/router';
 import homeStyles from '@/styles/home.module.css';
