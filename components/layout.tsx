@@ -4,7 +4,7 @@ import React, { createContext } from 'react';
 import styles from '../styles/layout.module.css';
 import Navbar from './navbar';
 import { useRouter } from 'next/router';
-import homeStyles from '../styles/home.module.css';
+// import homeStyles from '../styles/home.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -25,7 +25,7 @@ export default function Layout({
   function applyStyles() {
     switch (router.pathname) {
       case '/': {
-        return homeStyles.home;
+        // return homeStyles.home;
       }
       default: {
         return '';
