@@ -63,6 +63,9 @@ export default function Layout({
           className={`flex flex-col grow p-5`}
           style={{
             background: "url('/images/backgrounds/keyboard-mouse.jpg')",
+            backgroundAttachment: 'fixed',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
           }}
         >
           <main className='grow max-w-7xl md:px-0 mx-auto'>{children}</main>
