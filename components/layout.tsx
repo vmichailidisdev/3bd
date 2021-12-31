@@ -26,20 +26,15 @@ export default function Layout({
   function applyStyles() {
     switch (router.pathname) {
       case '/': {
-        return (
-          <div className={`h-full w-hscreen`}>
-            <Image
-              src='/images/backgrounds/keyboard-mouse.jpg'
-              alt='keyboard mouse'
-              layout='responsive'
-              width={1600}
-              height={1200}
-            />
-          </div>
-        );
+        return {
+          background: "url('/images/backgrounds/keyboard-mouse.jpg')",
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        };
       }
       default: {
-        return '';
+        return {};
       }
     }
   }
@@ -59,15 +54,7 @@ export default function Layout({
         <Navbar />
       </header>
       <div className='flex flex-col justify-between overflow-y-auto w-full h-full min-h-hscreen'>
-        <div
-          className={`flex flex-col grow p-5`}
-          style={{
-            background: "url('/images/backgrounds/keyboard-mouse.jpg')",
-            backgroundAttachment: 'fixed',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-          }}
-        >
+        <div className={`flex flex-col grow p-5`} style={applyStyles()}>
           <main className='grow max-w-7xl md:px-0 mx-auto'>{children}</main>
         </div>
         <footer className='max-w-7xl px-5 md:px-0 w-full mx-auto my-5 flex flex-col sm:flex-row justify-between items-center gap-2'>
