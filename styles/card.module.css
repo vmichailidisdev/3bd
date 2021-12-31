@@ -1,0 +1,50 @@
+.lighting {
+  background: linear-gradient(
+    to right,
+    hsl(0, 100%, 50%),
+    hsl(60, 100%, 50%),
+    hsl(120, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(240, 100%, 50%),
+    hsl(320, 100%, 50%),
+    hsl(0, 100%, 50%),
+    hsl(60, 100%, 50%),
+    hsl(120, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(240, 100%, 50%),
+    hsl(320, 100%, 50%),
+    hsl(360, 100%, 50%)
+  );
+  background-size: 200% 100%;
+  background-position: 0% 100%;
+  animation: wave 1000ms linear infinite backwards;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+html[class='dark'] .numberOfKeys {
+  box-shadow: inset 0.1rem 0rem #fafafa, inset 0rem 0.05rem #fafafa,
+    inset -0.1rem 0rem #fafafa, inset 0rem -0.2rem #fafafa;
+}
+
+html[class='light'] .numberOfKeys {
+  box-shadow: inset 0.1rem 0rem #27272a, inset 0rem 0.05rem #27272a,
+    inset -0.1rem 0rem #27272a, inset 0rem -0.2rem #27272a;
+}
+
+.card {
+  transition: color 300ms linear, background-color 300ms linear,
+    transform 300ms linear;
+}
+
+.details {
+  transition: color 300ms linear, background-color 300ms linear,
+    transform 300ms linear;
+}

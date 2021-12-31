@@ -1,0 +1,34 @@
+.button {
+  background-image: linear-gradient(
+    to right,
+    hsl(0, 100%, 50%),
+    hsl(60, 100%, 50%),
+    hsl(120, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(240, 100%, 50%),
+    hsl(320, 100%, 50%),
+    hsl(0, 100%, 50%),
+    hsl(60, 100%, 50%),
+    hsl(120, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(240, 100%, 50%),
+    hsl(320, 100%, 50%),
+    hsl(0, 100%, 50%)
+  );
+  background-size: 200% 100%;
+  background-position: 0%, 0%;
+}
+
+.value {
+  transition: color 300ms linear, background-color 300ms linear;
+}
+
+.button:hover {
+  animation: hueRotate 1000ms linear infinite backwards;
+}
+
+@keyframes hueRotate {
+  100% {
+    background-position: 100%, 0%;
+  }
+}

@@ -1,9 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #3f3f46;
+  background: #fafafa;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+html[class='dark'] {
+  color: #fafafa;
+  background: #3f3f46;
 }
 
 a {
@@ -13,4 +27,83 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+::selection {
+  color: #fafafa;
+  background: #22d3ee;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(orange, red, purple, cyan);
+  border-radius: 0.5rem;
+}
+
+#__next {
+  height: 100%;
+}
+
+.keyboard-color-white {
+  color: #ffffff;
+  background: #ffffff;
+}
+.keyboard-color-black {
+  color: #000000;
+  background: #000000;
+}
+.keyboard-color-red {
+  color: #ff0000;
+  background: #ff0000;
+}
+.keyboard-color-purple {
+  color: #800080;
+  background: #800080;
+}
+.keyboard-color-pink {
+  color: #ffc0cb;
+  background: #ffc0cb;
+}
+.keyboard-color-gray {
+  color: #808080;
+  background: #808080;
+}
+.keyboard-color-lightblue {
+  color: #87cefa;
+  background: #87cefa;
+}
+.keyboard-color-darkblue {
+  color: #191970;
+  background: #191970;
+}
+.keyboard-color-cyan {
+  color: #00ffff;
+  background: #00ffff;
+}
+.keyboard-color-blue {
+  color: #0000ff;
+  background: #0000ff;
+}
+.keyboard-color-yellow {
+  color: #ffff00;
+  background: #ffff00;
+}
+.keyboard-color-darkgray {
+  color: #696969;
+  background: #696969;
+}
+.keyboard-color-lightbrown {
+  color: #fff8dc;
+  background: #fff8dc;
+}
+.keyboard-color-brown {
+  color: #deb887;
+  background: #deb887;
 }

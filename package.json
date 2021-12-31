@@ -2,21 +2,40 @@
   "name": "3bd",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node scripts/keyboards.mjs && next dev",
+    "build": "node scripts/keyboards.mjs && next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@headlessui/react": "^1.4.2",
+    "@heroicons/react": "^1.0.5",
+    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/line-clamp": "^0.3.0",
+    "@tailwindcss/typography": "^0.5.0",
+    "date-fns": "^2.27.0",
+    "gray-matter": "^4.0.3",
     "next": "12.0.7",
+    "next-themes": "^0.0.15",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1"
   },
   "devDependencies": {
     "@types/node": "16.11.13",
     "@types/react": "17.0.37",
+    "autoprefixer": "^10.4.0",
     "eslint": "8.4.1",
-    "eslint-config-next": "12.0.7",
+    "eslint-config-next": "^12.0.7",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.2",
     "typescript": "4.5.4"
   }
 }

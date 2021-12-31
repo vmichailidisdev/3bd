@@ -1,0 +1,11 @@
+.navbar {
+  transition: color 300ms linear, background-color 300ms linear,
+    fill 300ms linear;
+}
+
+.logo-description {
+  color: transparent;
+  background: linear-gradient(to right, orange, red, purple, cyan);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
