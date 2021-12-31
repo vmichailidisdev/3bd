@@ -27,7 +27,7 @@ export default function Layout({
     switch (router.pathname) {
       case '/': {
         return (
-          <div className={`h-full w-hscreen ${homeStyles.home}`}>
+          <div className={`h-full w-hscreen`}>
             <Image
               src='/images/backgrounds/keyboard-mouse.jpg'
               alt='keyboard mouse'
