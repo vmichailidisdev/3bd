@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/styles/overlay.module.css';
+import styles from '../styles/overlay.module.css';
 
 export default function Overlay({ children }: { children: JSX.Element }) {
   return (

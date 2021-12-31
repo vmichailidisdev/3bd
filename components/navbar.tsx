@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import Logo from '@/components/logo';
+import Logo from './logo';
 import Theme from './theme';
 import Search from './search';
 import styles from '@/styles/navbar.module.css';

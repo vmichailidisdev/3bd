@@ -1,4 +1,4 @@
-import { Keyboard } from '@/types/keyboard';
+import { Keyboard } from '../types/keyboard';
 
 export function getAllKeyboardSwitches(keyboards: Keyboard[]) {
   return Array.from(new Set(keyboards.map((keyboard) => keyboard.switches)));

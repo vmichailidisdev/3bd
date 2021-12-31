@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import { getSortedKeyboardData } from '../lib/keyboards';
-import { Keyboard } from '@/types/keyboard';
-import Card from '@/components/card';
+import { Keyboard } from '../types/keyboard';
+import Card from '../components/card';
 import Link from 'next/link';
 
 type Props = {

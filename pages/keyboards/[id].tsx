@@ -1,9 +1,9 @@
-import { Keyboard } from '@/types/keyboard';
+import { Keyboard } from '../../types/keyboard';
 import Image from 'next/image';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { getAllKeyboardsIds, getKeyboardData } from '@/lib/keyboards';
+import { getAllKeyboardsIds, getKeyboardData } from '../../lib/keyboards';
 import Date from 'components/date';
-import { KeyboardImage } from '@/types/keyboard';
+import { KeyboardImage } from '../../types/keyboard';
 
 export default function KeyboardDetails({
   keyboardData: { id, name, date, images, contentHtml },

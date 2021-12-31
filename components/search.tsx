@@ -1,8 +1,8 @@
-import { getAllKeyboardSwitches, getAllKeyboardWired } from '@/lib/utils';
-import { ColorContext, KeyboardContext } from '@/pages/_app';
-import styles from '@/styles/search.module.css';
-import { Filters } from '@/types/filters';
-import { Keyboard, Wireless } from '@/types/keyboard';
+import { getAllKeyboardSwitches, getAllKeyboardWired } from '../lib/utils';
+import { ColorContext, KeyboardContext } from '../pages/_app';
+import styles from '../styles/search.module.css';
+import { Filters } from '../types/filters';
+import { Keyboard, Wireless } from '../types/keyboard';
 import { Dialog, Transition } from '@headlessui/react';
 import Link from 'next/link';
 import { Fragment, useContext, useEffect, useState } from 'react';

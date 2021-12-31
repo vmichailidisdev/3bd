@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Image from 'next/image';
-import Date from '@/components/date';
+import Date from './date';
 import { CardProps } from '@/types/card';
 import {
   KeyboardImage,
@@ -13,7 +13,7 @@ import {
   Wireless,
   Lighting,
 } from '@/types/keyboard';
-import styles from '@/styles/card.module.css';
+import styles from '../styles/card.module.css';
 import { ColorContext } from '@/pages/_app';
 
 function isZero(value: number) {

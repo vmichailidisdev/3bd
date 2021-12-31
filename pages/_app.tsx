@@ -1,11 +1,11 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
-import Layout from '@/components/layout';
+import Layout from '../components/layout';
 import keyboards from 'scripts/keyboards.json';
 import colors from 'scripts/colors.json';
 import { createContext } from 'react';
-import { Keyboard } from '@/types/keyboard';
+import { Keyboard } from '../types/keyboard';
 
 export const KeyboardContext = createContext<Keyboard[]>([]);
 export const ColorContext = createContext<Record<string, string>>({});
