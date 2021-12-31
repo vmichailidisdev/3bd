@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import homeStyles from '../styles/home.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
 import {
   faYoutube,
   faTwitch,
@@ -25,7 +26,17 @@ export default function Layout({
   function applyStyles() {
     switch (router.pathname) {
       case '/': {
-        return homeStyles.home;
+        return (
+          <div className={`h-full w-hscreen ${homeStyles.home}`}>
+            <Image
+              src='/images/backgrounds/keyboard-mouse.jpg'
+              alt='keyboard mouse'
+              layout='responsive'
+              width={1600}
+              height={1200}
+            />
+          </div>
+        );
       }
       default: {
         return '';
@@ -48,7 +59,12 @@ export default function Layout({
         <Navbar />
       </header>
       <div className='flex flex-col justify-between overflow-y-auto w-full h-full min-h-hscreen'>
-        <div className={`flex flex-col grow p-5 ${applyStyles()}`}>
+        <div
+          className={`flex flex-col grow p-5`}
+          style={{
+            background: "url('/images/backgrounds/keyboard-mouse.jpg')",
+          }}
+        >
           <main className='grow max-w-7xl md:px-0 mx-auto'>{children}</main>
         </div>
         <footer className='max-w-7xl px-5 md:px-0 w-full mx-auto my-5 flex flex-col sm:flex-row justify-between items-center gap-2'>
