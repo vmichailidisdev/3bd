@@ -16,6 +16,7 @@ export default function KeyboardDetails({
     ...images[0],
   };
   const router = useRouter();
+  // console.log(router);
   return (
     <>
       <Head>
@@ -24,7 +25,7 @@ export default function KeyboardDetails({
           name='description'
           content={`Take a look in the ${name} custom keyboard `}
         />
-        <meta property='og:url' content={``} />
+        <meta property='og:url' content={`${router.asPath}`} />
         <meta property='og:site_name' content={`3BD`} />
         <meta property='og:title' content={name} />
         <meta property='og:description' content={contentHtml} />
@@ -33,8 +34,8 @@ export default function KeyboardDetails({
           property='og:image'
           content={`/images/keyboards/${mainImage.name}`}
         />
-        <meta property='og:image:height' content={String(mainImage.height)} />
-        <meta property='og:image:width' content={String(mainImage.width)} />
+        {/* <meta property='og:image:height' content={String(mainImage.height)} />
+        <meta property='og:image:width' content={String(mainImage.width)} /> */}
       </Head>
       <div className='flex flex-col justify-center items-center'>
         <div className='text-3xl font-bold'>{name}</div>
