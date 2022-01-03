@@ -5,6 +5,7 @@ import { getAllKeyboardsIds, getKeyboardData } from '../../lib/keyboards';
 import Date from 'components/date';
 import { KeyboardImage } from '../../types/keyboard';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 export default function KeyboardDetails({
   keyboardData: { id, name, date, images, contentHtml },
@@ -14,6 +15,7 @@ export default function KeyboardDetails({
   const mainImage: KeyboardImage = {
     ...images[0],
   };
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -22,6 +24,17 @@ export default function KeyboardDetails({
           name='description'
           content={`Take a look in the ${name} custom keyboard `}
         />
+        <meta property='og:url' content={``} />
+        <meta property='og:site_name' content={`3BD`} />
+        <meta property='og:title' content={name} />
+        <meta property='og:description' content={contentHtml} />
+        <meta property='og:type' content='article' />
+        <meta
+          property='og:image'
+          content={`/images/keyboards/${mainImage.name}`}
+        />
+        <meta property='og:image:height' content={String(mainImage.height)} />
+        <meta property='og:image:width' content={String(mainImage.width)} />
       </Head>
       <div className='flex flex-col justify-center items-center'>
         <div className='text-3xl font-bold'>{name}</div>

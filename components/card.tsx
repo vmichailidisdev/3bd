@@ -186,7 +186,7 @@ export default function Card({
     <div
       className={`flex flex-col w-full gap-2 bg-[rgba(250,250,250,0.9)] dark:bg-[rgba(39,39,42,0.9)] h-full rounded-lg py-10 relative ${
         styles.card
-      } ${hover ? 'scale-110' : ''}`}
+      } ${hover ? 'scale-105 lg:scale-110' : ''}`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onTouchStart={() => setHover(true)}
