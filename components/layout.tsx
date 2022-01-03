@@ -15,7 +15,7 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
-export const siteTitle = '3BD - ThreeBoard';
+export const siteTitle = '3BD - ThreeBoard - Custom Keyboards';
 
 export default function Layout({
   children = [],
@@ -43,12 +43,19 @@ export default function Layout({
       className={`flex flex-col w-full h-full min-h-screen relative text-zinc-800 dark:text-zinc-50 bg-neutral-50 dark:bg-zinc-800 overflow-y-auto ${styles.layout}`}
     >
       <Head>
-        <link rel='icon' href='/favicon.ico' />
-        <meta name='description' content='3BD - ThreeBoard, Custom keyboards' />
-        <meta property='og:type' content='3BD' />
-        <meta property='og:url' content='' />
-        <meta property='og:image' content='' />
         <title>{siteTitle}</title>
+        <meta
+          name='description'
+          content="Gaming! Yep, it's all about gaming here. I'm a gamer, you're a gamer, we're all gamers. As gamers we demand tools tailored to our taste, perfected to dominate all opposition. I've therefore elected to specialize in building and modding keyboards to fit gamers. Specifically, taking mediocre and sub-par pre-builts, loving them, tweaking them, modding them until they\'ve reached master class."
+        />
+        <meta
+          name='keywords'
+          content='custom, keyboards, custom keyboards, 3bd, threeboard, rgb, mod, modded, modded keyboards'
+        />
+        {/* <meta property='og:type' content='3BD' />
+        <meta property='og:url' content='' />
+        <meta property='og:image' content='' /> */}
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <header>
         <Navbar />
