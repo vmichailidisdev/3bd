@@ -1,22 +1,24 @@
 import { Keyboard } from '../../types/keyboard';
 import Image from 'next/image';
-import { GetStaticProps, GetStaticPaths } from 'next';
+import { GetStaticProps, GetStaticPaths, NextPage } from 'next';
 import { getAllKeyboardsIds, getKeyboardData } from '../../lib/keyboards';
 import Date from 'components/date';
 import { KeyboardImage } from '../../types/keyboard';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-export default function KeyboardDetails({
-  keyboardData: { id, name, date, images, contentHtml },
-}: {
-  keyboardData: Keyboard;
-}) {
+interface Props {
+  keyboard: Keyboard;
+}
+
+const KeyboardDetails: NextPage<Props> = ({ keyboard }) => {
+  const { name, date, images, contentHtml } = keyboard;
   const mainImage: KeyboardImage = {
     ...images[0],
   };
   const router = useRouter();
   // console.log(router);
+  console.log(process.env.NEXT_PUBLIC_TEST);
   return (
     <>
       <Head>
@@ -34,8 +36,8 @@ export default function KeyboardDetails({
           property='og:image'
           content={`/images/keyboards/${mainImage.name}`}
         />
-        {/* <meta property='og:image:height' content={String(mainImage.height)} />
-        <meta property='og:image:width' content={String(mainImage.width)} /> */}
+        <meta property='og:image:height' content={String(mainImage.height)} />
+        <meta property='og:image:width' content={String(mainImage.width)} />
       </Head>
       <div className='flex flex-col justify-center items-center'>
         <div className='text-3xl font-bold'>{name}</div>
@@ -57,7 +59,7 @@ export default function KeyboardDetails({
       </div>
     </>
   );
-}
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllKeyboardsIds();
@@ -68,10 +70,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const keyboardData = await getKeyboardData(params?.id as string);
+  const keyboard = await getKeyboardData(params?.id as string);
   return {
     props: {
-      keyboardData,
+      keyboard,
     },
   };
 };
+
+export default KeyboardDetails;

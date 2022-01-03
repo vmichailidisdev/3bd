@@ -19,3 +19,7 @@ export function getAllKeyboardType(keyboards: Keyboard[]) {
 export function getAllKeyboardWired(keyboards: Keyboard[]) {
   return Array.from(new Set(keyboards.map((keyboard) => keyboard.wired)));
 }
+
+export function getDomain() {
+  return;
+}
