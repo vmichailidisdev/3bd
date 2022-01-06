@@ -20,6 +20,10 @@ export function getAllKeyboardWired(keyboards: Keyboard[]) {
   return Array.from(new Set(keyboards.map((keyboard) => keyboard.wired)));
 }
 
-export function getDomain() {
-  return;
+export function getResponsiveHeight(
+  width: number,
+  height: number,
+  maxWidth: number
+) {
+  return (maxWidth * height) / width;
 }

@@ -6,6 +6,7 @@ import Date from 'components/date';
 import { KeyboardImage } from '../../types/keyboard';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { getResponsiveHeight } from '@/lib/utils';
 
 interface Props {
   keyboard: Keyboard;
@@ -17,8 +18,13 @@ const KeyboardDetails: NextPage<Props> = ({ keyboard }) => {
     ...images[0],
   };
   const router = useRouter();
-  // console.log(router);
-  console.log(process.env.NEXT_PUBLIC_TEST);
+
+  const ogImageHeight = getResponsiveHeight(
+    mainImage.width,
+    mainImage.height,
+    1200
+  );
+
   return (
     <>
       <Head>
@@ -36,7 +42,7 @@ const KeyboardDetails: NextPage<Props> = ({ keyboard }) => {
           property='og:image'
           content={`/images/keyboards/${mainImage.name}`}
         />
-        <meta property='og:image:height' content={'600'} />
+        <meta property='og:image:height' content={String(ogImageHeight)} />
         <meta property='og:image:width' content={'1200'} />
       </Head>
       <div className='flex flex-col justify-center items-center'>
