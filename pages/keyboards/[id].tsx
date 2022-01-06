@@ -31,13 +31,13 @@ const KeyboardDetails: NextPage<Props> = ({ keyboard }) => {
         <meta property='og:site_name' content={`3BD`} />
         <meta property='og:title' content={name} />
         <meta property='og:description' content={contentHtml} />
-        <meta property='og:type' content='article' />
+        <meta property='og:type' content='website' />
         <meta
           property='og:image'
           content={`/images/keyboards/${mainImage.name}`}
         />
-        <meta property='og:image:height' content={String(mainImage.height)} />
-        <meta property='og:image:width' content={String(mainImage.width)} />
+        <meta property='og:image:height' content={'600'} />
+        <meta property='og:image:width' content={'1200'} />
       </Head>
       <div className='flex flex-col justify-center items-center'>
         <div className='text-3xl font-bold'>{name}</div>
